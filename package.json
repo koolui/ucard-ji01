@@ -1,0 +1,37 @@
+{
+  "name": "ucard-ji01",
+  "version": "1.0.0",
+  "description": "Free HTML User Card Profile - Bootstrap 4 Template #1",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koolui/ucard-ji01.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "bootstrap",
+    "freebie",
+    "user",
+    "profile",
+    "usercard",
+    "social"
+  ],
+  "author": "Kool UI Studio",
+  "license": "SEE LICENSE IN README.md",
+  "bugs": {
+    "url": "https://github.com/koolui/ucard-ji01/issues"
+  },
+  "homepage": "https://github.com/koolui/ucard-ji01#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-sass": "^4.0.2"
+  }
+}

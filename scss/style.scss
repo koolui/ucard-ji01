@@ -1,0 +1,129 @@
+// Import necessary styling for demo only (You dont need this)
+@import 'demo/ads.scss';
+@import 'demo/demo.scss';
+
+// Import variable
+@import 'vars.scss';
+
+
+body {
+    font-size: $root-font-size;
+    background: $grad-color-01;
+    background: linear-gradient(285deg, $grad-color-01 0%, $grad-color-02 100%);
+    background-attachment: fixed !important;
+}
+
+// Begin user card styling
+.koolui-ucard-ji01 {
+    font-family: $custom-google-font;
+    padding: $gap * 2 0;
+    
+    // User card item
+    .item {
+        background-color: $base-color;
+        border-radius: $item-border-radius;
+        padding: $gap;
+        margin-bottom: $gap;
+        position:relative;
+        overflow: hidden;
+        text-align: center;
+        color: $text-color;
+        
+        // Medium devices (tablets, 992px and up)
+        @media screen and (min-width: 992px) {
+            margin-bottom: 0;
+        }
+
+        &__badge {
+            position: absolute;
+            top: $gap;
+            right: 0;
+            height: $badge-height;
+            background-color: $accent-color;
+            color: $text-color;
+            line-height: $badge-height;
+            padding: 0 $gap / 3;
+            border-radius: $badge-height / 2 0 0 $badge-height / 2;
+            font-size: .75rem;
+            font-weight: 500;
+        }
+
+        // Item media (icon or image)
+        &__media {
+            width: $item-media-size;
+            height: $item-media-size;
+            border-radius: $item-media-size / 2;
+            box-shadow: 0 0 0 5px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin: 0 auto $gap / 1.5;
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        // Typography
+        &__heading {
+            margin-bottom: $gap;
+            h3 {
+                font-size: 1.125rem;
+                font-weight: 500;
+                line-height: 1.25rem;
+                margin: 0;
+                margin-bottom: $gap / 3;
+                position: relative;
+                &:after {
+                    background-color: $primary-color;
+                    width: $gap * 2;
+                    height: 2px;
+                    border-radius: 1px;
+                    content: "";
+                    bottom: -($gap / 3);
+                    left: 50%;
+                    margin-left: -($gap);
+                    position: absolute;
+                    transition: background-color 200ms ease-in-out, width 200ms ease-in-out, margin-left 200ms ease-in-out;
+                }
+            }
+            small {
+                font-size: .875rem;
+                line-height: 1.875rem;
+                color: $text-muted-color;
+                margin-top: 0;
+            }
+        }
+
+        // Button
+        .btn.btn-primary {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $base-color;
+            height: $button-height;
+            border-radius: $button-height / 2;
+            font-weight: 600;
+            font-size: .875rem;
+            &:hover {
+                background-color: darken($primary-color,15);
+                border-color: darken($primary-color,15);
+            }
+        }
+
+        &:hover {
+            .item__heading {
+                h3 {
+                    &:after {
+                        background-color: $accent-color;
+                        width: $gap * 3;
+                        margin-left: -($gap * 1.5);
+                    }
+                }
+            }
+        }
+
+    }
+}
